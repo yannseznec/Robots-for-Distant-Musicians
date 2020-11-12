@@ -1,0 +1,53 @@
+#N canvas 0 23 891 574 16;
+#X obj 281 303 bonk~;
+#X obj 52 208 adc~;
+#X msg 618 238 minvel \$1;
+#X obj 642 159 hsl 200 50 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10969 1;
+#X obj 280 343 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 364 185 learn 10;
+#X msg 502 183 learn 0;
+#X msg 154 225 debounce 0;
+#X obj 150 183 loadbang;
+#X obj 395 47 tgl 40 0 empty empty learn 17 7 0 14 -262144 -1 -1 0
+1;
+#X obj 392 121 sel 1 0;
+#X obj 350 370 unpack f f;
+#X floatatom 247 446 5 0 0 0 - - -;
+#X floatatom 488 411 5 0 0 0 - - -;
+#X obj 247 482 sel 0 1 2;
+#X obj 247 528 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 304 527 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 365 528 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 603 305 write clap_mug_box.txt;
+#X msg 945 302 read clap_mug_box.txt;
+#X obj 947 254 loadbang;
+#X obj 641 75 loadbang;
+#X msg 639 112 70;
+#X connect 0 0 4 0;
+#X connect 0 1 11 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 0;
+#X connect 10 1 6 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 12 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 14 2 17 0;
+#X connect 18 0 0 0;
+#X connect 19 0 0 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 22 0 3 0;
